@@ -1,6 +1,6 @@
 ### Work Office Management webiste
 ### Description:
-##### Website enables employees to register to go to their home page where they can navigate to different pages including : Add Departement , Add Employee and Employees , which add new departement , add new employee or show employees based on different filters respectively.There is also Edit option enables to edit employee information
+##### Website enables employees to register to go to their home page where they can navigate to different pages including : Add Departement , Add Employee and Employees , which add new departement , add new employee or show employees based on different filters , respectively.There is also Edit option enabled to edit employee information
 
 ### Developement tool used:
 ##### CSS,HTML,Bootstap,PHP,MySQL
