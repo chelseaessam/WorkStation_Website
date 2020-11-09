@@ -1,0 +1,60 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="css/AddEmp.css">
+     <Title>
+        Employees
+    </Title>
+    </head>
+   
+    <body>
+        <!--first navigation bar!-->
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="col-md-9">
+                <a class="navbar-brand">
+                Employees
+                </a>
+                </div>
+
+                <div class="col-md-3">
+                <a class="navbar-brand">
+                    <i class="far fa-user-circle"></i> Hi
+                    &nbsp;
+                    <a type="button" class="navbar-brand" href="Home.html">Logout</a>
+                    
+                </a>
+                </div>
+                
+            </nav>
+        <!--second navigation bar!-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <a class="btn navbar-brand" href="AddEmp.html" >Add Employee</a>
+            <a class="btn navbar-brand" href="AddDep.html">Add Departement</a>
+            <a class="btn navbar-brand" href="List.html">Employees</a>
+
+            
+        </nav>
+        &nbsp;
+        <!--form to search employee by any of the employee fields!-->
+        <form action="List.php">
+            <label class="col-md-2"> Search By</label>
+            
+            <select name="parameter"class="col-md-2">
+            <option >Employee ID</option>
+            <option >First Name</option>
+            <option >Last Name</option>
+            <option >Age</option>
+            <option >Departement Name</option>
+            <option >Contact</option>
+            <option>All</option>
+            </select>
+            
+            <input type="text" class="col-md-6" name="value">
+            <button type="submit" class="btn btn-secondary col-md-1">Search</button>
+        </form>
+    </body>
+</html>

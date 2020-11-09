@@ -1,0 +1,15 @@
+.title{
+text-align: center;
+padding-top: 100px;
+font-size: 30px;
+}
+#registerButton{
+align-self: center;
+text-align: center;
+}
+p{
+	color:red;
+	position: relative;
+	left:20px;
+
+}

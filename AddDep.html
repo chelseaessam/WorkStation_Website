@@ -1,0 +1,100 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="css/AddDep.css">
+      <Title>
+        Add Departement
+    </Title>
+    </head>
+  
+    <body>
+        <!--Frist navigation bar!-->
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="col-md-9">
+                <a class="navbar-brand">
+                Add Departement
+                </a>
+                </div>
+
+                <div class="col-md-3">
+                <a class="navbar-brand">
+                    <i class="far fa-user-circle"></i> Hi
+                    &nbsp;
+                    <a type="button" class="navbar-brand" href="Home.html">Logout</a>
+                    
+                </a>
+                </div>
+                
+            </nav>
+        <!--second navigation bar!-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <a class="btn navbar-brand" href="AddEmp.html" >Add Employee</a>
+            <a class="btn navbar-brand" href="AddDep.html">Add Departement</a>
+            <a class="btn navbar-brand" href="List.html">Employees</a>
+
+            
+        </nav>
+        &nbsp;
+        <!-- form to add new departement!-->
+        <form action="addDep.php" onsubmit="return validate();">
+            <label class="col-md-4" >Departement ID</label>
+            <input type="number" name="ID" id="depid"><p id="depcomment"></p>
+            <br>
+            
+            <label class="col-md-4">Departement Name</label>
+            <input type="text" name="Name" id="name"><p id="namecomment"></p>
+            <br>
+            
+            <label class="col-md-4">Manager ID</label>
+            <input type="number"name="ManagerID" id="managerid"><p id="manageridcomment"></p>
+            <br>
+            <button type="submit" class=" btn btn-secondary col-md-2" id="addButton" >Add</button>
+        </form>
+        <script type="text/javascript">
+            //function checks if Departement ID field is empty , if so the form is not submitted
+            function validate(){
+                var rightid=true;
+                var rightname=true;
+                var rightmanagerid=true;
+                if($("#depid").val()=='')
+                {
+                    $("#depcomment").text("Departement ID can't be empty");
+                    rightid=false;
+
+                }
+                if($("#name").val()=='')
+                {
+                    $("#namecomment").text("Departement name can't be empty");
+                    rightname=false;
+                }
+
+                if($("#managerid").val()=='')
+                {
+                    $("#manageridcomment").text("Manager ID can't be empty");
+                    rightmanagerid=false;
+                }
+                if(rightid)
+                {
+                 $("#depcomment").text("Departement ID confirmed");
+                }
+                if(rightname)
+                {
+                $("#namecomment").text("Departement name confirmed");
+                }
+                if(rightmanagerid)
+                {
+                    $("#manageridcomment").text("Manager ID confirmed");
+                }
+                if(rightid&&rightname&&rightmanagerid)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+        </script>
+                

@@ -1,0 +1,19 @@
+#addButton{
+    position: relative;
+    left:170px;
+}
+.contactbar{
+    position: relative;
+    left:174px;
+    width:1150px;
+}
+p{
+	color:red;
+	position: relative;
+	left:20px;
+
+}
+.contacts{
+	position: relative;
+	left:174px;
+}
