@@ -1,8 +1,8 @@
 ### Work Office Management webiste
-##### Developement tool used:CSS,HTML,Bootstap,PHP,MySQL
-##### Database server :PhpMyAdmin
-##### Software tools used: XAMPP
-##### For Restoring of database:
+###### Developement tool used:CSS,HTML,Bootstap,PHP,MySQL
+###### Database server :PhpMyAdmin
+###### Software tools used: XAMPP
+#### For Restoring of database:
 ##### 1.download mydb.sql which contains the database schema, 
 ##### 2.Make sure that APACHE and MySQL are running on XAMPP
 ##### 3.Go to localhost/phpMyAdmin
