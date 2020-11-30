@@ -1,6 +1,6 @@
 <?php
 include_once('database.php');
-Database::connect("mydb","root","");
+Database::connect("newdb","root","");
 $email=$_POST["email"];
 $password=$_POST["password"];
 //checking if user is registering with email that exists already in the database

@@ -40,14 +40,15 @@
 	<?php
 
 	    //connecting to the database and adding new employee 
-        include_once("addemployeefun.php");
-		include_once ("addcontactfun.php");
+        include_once("Employee.php");
 		include_once("database.php");
-		Database::connect("mydb", "root", "");
-        employee::add($_GET["ID"],$_GET["FName"],$_GET["LName"],$_GET["Age"],$_GET["DepID"]);
+		Database::connect("newdb", "root", "");
+        employee::addEmployee($_GET["FName"],$_GET["LName"],$_GET["Age"],$_GET["DepName"]);
         $contactno=$_GET["contactno"];
+        $id=employee::getID($_GET["FName"],$_GET["LName"],$_GET["Age"],$_GET["DepName"]);
+        echo "em id is ".$id;
         for($i=1;$i<=$contactno;$i++){
-            contact::add($_GET["ID"],$_GET[$i]);
+            employee::addContact($id,$_GET[$i]);
         }
 		
 		echo"Employee added successfully";

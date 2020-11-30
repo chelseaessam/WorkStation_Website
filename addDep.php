@@ -39,10 +39,10 @@
         &nbsp;
 	<?php 
     //Connecting to the database and calling function add in departement class to add new departement then showing success on page
-	include_once("addDepfun.php");
+	include_once("Departement.php");
 	include_once("database.php");
-	Database::connect("mydb","root","");
-	departement::add($_GET["ID"],$_GET["Name"],$_GET["ManagerID"]);
+	Database::connect("newdb","root","");
+	departement::add($_GET["Name"],$_GET["ManagerFName"],$_GET["ManagerLName"]);
 	echo"Departement added successfully"	?>
 	</body>
 </html>

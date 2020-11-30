@@ -44,19 +44,19 @@
    
    <?php
    include_once('database.php');
-   include_once('addemployeefun.php');
-   Database::connect("mydb","root","");
+   include_once('Employee.php');
+   Database::connect("newdb","root","");
     $id=$_GET["ID"];
-    $depid=$_GET["DepID"];
+    $depName=$_GET["DepName"];
     $age=$_GET["Age"];
     $contactno=$_GET["contactno"];
-    employee::updateEmp($id,$age,$depid);
-    $contact=employee::getcontact($id);
+    employee::updateEmployee($id,$age,$depName);
+    $contact=employee::getContact($id);
     for($i=0;$i<$contactno;$i++)
     {
       $newcontact=$_GET[$i];
       $oldcontact=$contact[$i]["contacts"];
-      employee::updatecontact($id,$newcontact,$oldcontact);
+      employee::updateContact($id,$newcontact,$oldcontact);
 
     }    
     echo "Employee edited successfully "

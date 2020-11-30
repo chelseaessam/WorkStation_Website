@@ -6,6 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="css/AddDep.css">
+    <script src="js/AddDep.js"></script>
       <Title>
         Add Departement
     </Title>
@@ -41,60 +42,18 @@
         &nbsp;
         <!-- form to add new departement!-->
         <form action="addDep.php" onsubmit="return validate();">
-            <label class="col-md-4" >Departement ID</label>
-            <input type="number" name="ID" id="depid"><p id="depcomment"></p>
-            <br>
             
             <label class="col-md-4">Departement Name</label>
             <input type="text" name="Name" id="name"><p id="namecomment"></p>
             <br>
             
-            <label class="col-md-4">Manager ID</label>
-            <input type="number"name="ManagerID" id="managerid"><p id="manageridcomment"></p>
+            <label class="col-md-4">Manager First Name</label>
+            <input type="text"name="ManagerFName" id="managerfirstname"><p id="managerfirstnamecomment"></p>
+            <br>
+
+            <label class="col-md-4">Manager Last Name</label>
+            <input type="text"name="ManagerLName" id="managerlastname"><p id="managerlastnamecomment"></p>
             <br>
             <button type="submit" class=" btn btn-secondary col-md-2" id="addButton" >Add</button>
         </form>
-        <script type="text/javascript">
-            //function checks if Departement ID field is empty , if so the form is not submitted
-            function validate(){
-                var rightid=true;
-                var rightname=true;
-                var rightmanagerid=true;
-                if($("#depid").val()=='')
-                {
-                    $("#depcomment").text("Departement ID can't be empty");
-                    rightid=false;
-
-                }
-                if($("#name").val()=='')
-                {
-                    $("#namecomment").text("Departement name can't be empty");
-                    rightname=false;
-                }
-
-                if($("#managerid").val()=='')
-                {
-                    $("#manageridcomment").text("Manager ID can't be empty");
-                    rightmanagerid=false;
-                }
-                if(rightid)
-                {
-                 $("#depcomment").text("Departement ID confirmed");
-                }
-                if(rightname)
-                {
-                $("#namecomment").text("Departement name confirmed");
-                }
-                if(rightmanagerid)
-                {
-                    $("#manageridcomment").text("Manager ID confirmed");
-                }
-                if(rightid&&rightname&&rightmanagerid)
-                {
-                    return true;
-                }
-                else
-                    return false;
-            }
-        </script>
-                
+        

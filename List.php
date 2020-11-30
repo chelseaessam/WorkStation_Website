@@ -12,13 +12,13 @@
 <body>
 	<?php 
 	include_once("database.php");
-	include("Listfun.php");
-	Database::connect("mydb", "root", "");
+	include("Employee.php");
+	Database::connect("newdb", "root", "");
 //changing search criteria from the displayed name on the website to the name given in tables in the database
 	$var=$_GET["parameter"];
 	if($var=="All")
 	{
-		$results=myList::All();
+		$results=employee::All();
 	
 	}
 	else
@@ -48,7 +48,7 @@
 		$parameter="contacts";
 		break;
 	}
-	$results=myList::result($parameter,$_GET["value"]);
+	$results=employee::result($parameter,$_GET["value"]);
 }
 	
 

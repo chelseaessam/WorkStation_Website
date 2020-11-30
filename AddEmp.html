@@ -6,6 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="css/AddEmp.css">
+    <script src="js/AddEmp.js"></script>
     <Title>
         Add Employee
     </Title>
@@ -41,9 +42,6 @@
         &nbsp;
         <!--form to add new employee!-->
         <form action="addemployee.php " method="GET" onsubmit="return validate();">
-            <label class="col-md-2">Employee ID</label>
-            <input type="number" name="ID" id="empid"><p id="idcomment"></p>
-            <br>
             
             <label class="col-md-2">First Name</label>
             <input type="text" name="FName" id="fname"><p id="fnamecomment"></p>
@@ -57,8 +55,8 @@
             <input type="number" name="Age" id="age"><p id="agecomment"></p>
             <br>
             
-            <label class="col-md-2">Departement ID</label>
-            <input type="number" name="DepID">
+            <label class="col-md-2">Departement Name</label>
+            <input type="text" name="DepName">
             <br>
             
             <label class="col-md-2">Contacts</label>
@@ -72,69 +70,6 @@
             <button type="submit" class=" btn btn-secondary col-md-2" id="addButton" >Add</button>
             
         </form>
-       <script type="text/javascript">
-        //function to add new box for "contact" field on pressing the "plus"button
-       var contactno=1;
-       function clicked(){
-            contactno=contactno+1;
-            $("#myform").append('<input type="text" class="col-md-2" name="'+contactno+'"><br>');
-            document.getElementById("hiddenNo").value=contactno;
-
-           }
-        //function to validate that ID , first name , last name and age fields are not empty before submitting the form
-       function validate()
-       {
-        var rightID=true;
-            var rightfname=true;
-            var rightlname=true;
-            var rightage=true;
-            if($("#empid").val()=='')
-            {
-                rightID=false;
-                $("#idcomment").text("Employee ID can't be empty");
-            }
-             if($("#fname").val()=='')
-            {
-                rightfname=false;
-                $("#fnamecomment").text("First Name can't be empty");
-            }
-             if($("#lname").val()=='')
-            {
-                rightlname=false;
-                $("#lnamecomment").text("Last Name can't be empty");
-            }
-             if($("#age").val()=='')
-            {
-                rightage=false;
-                $("#agecomment").text("Age can't be empty");
-            }
-            if(rightID)
-            {
-                $("#idcomment").text("Employee ID confirmed");
-            }
-            if(rightfname)
-            {
-                $("#fnamecomment").text("First Name confirmed");
-            }
-           
-            if(rightlname)
-            {
-                $("#lnamecomment").text("Last Name confirmed");
-            }
-            if(rightage)
-            {
-                $("#agecomment").text("Age confirmed");
-            }
-            if(rightID&&rightfname&&rightlname&&rightage)
-            
-               {return true;} 
-            
-            else {return false;}
-        
-       }
-
-
-
-        </script>         
+       
     </body>
 </html>

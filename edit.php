@@ -45,16 +45,16 @@
    <?php
     $id=$_GET["empid"];
    include_once('database.php');
-   include_once('addemployeefun.php');
-   Database::connect("mydb","root","");
-   $row=employee::edit($id);
+   include_once('Employee.php');
+   Database::connect("newdb","root","");
+   $row=employee::editEmployee($id);
    foreach($row as $emp)
    {
    	$id=$emp["ID"];
    	$fname=$emp["FirstName"];
    	$lname=$emp["LastName"];
    	$age=$emp["Age"];
-   	$depid=$emp["DepID"];
+   	$depName=$emp["Name"];
    }
    ?>
    
@@ -75,8 +75,8 @@
             <input type="number" name="Age" id="age" value="<?php echo $age ?>" >
             <br>
             
-            <label class="col-md-2">Departement ID</label>
-            <input type="number" name="DepID" value="<?php echo $depid ?>">
+            <label class="col-md-2">Departement Name</label>
+            <input type="text" name="DepName" value="<?php echo $depName ?>">
             <br>
             
             <label class="col-md-2">Contacts</label>
